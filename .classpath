@@ -11,5 +11,6 @@
 	<classpathentry kind="lib" path="libs/commons-collections4-4.3-tests.jar"/>
 	<classpathentry kind="lib" path="libs/commons-collections4-4.3.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="D:/Spring Core Jar Files/Spring4 Jar Files/Spring4-JPA-Con-Jar-Files/ojdbc6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

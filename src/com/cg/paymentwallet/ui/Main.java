@@ -1,5 +1,6 @@
 package com.cg.paymentwallet.ui;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -68,7 +69,8 @@ public class Main {
 					System.out.println("Enter your pin");
 					pin = sc.nextInt();
 					Customer cust1 = service.getAccount(acno);
-					if(cust1==null) {
+					System.out.println(cust1);
+					if(cust1!=null) {
 					if (cust1.getPin() == pin) {
 						System.out.println("Enter the amount you want to add");
 						int amount = sc.nextInt();
@@ -128,7 +130,7 @@ public class Main {
 				System.out.println("Enter your pin");
 				pin = sc.nextInt();
 				Customer cusacc1 = service.getAccount(acno);
-				if(cusacc1 == null) {
+				if(cusacc1 != null) {
 				if(cusacc1.getPin()==pin) {
 					System.out.println("Enter the account number you want to transfer");
 					long accno = sc.nextLong();
@@ -158,11 +160,13 @@ public class Main {
 				acno = sc.nextLong();
 				System.out.println("Enter your pin");
 				pin = sc.nextInt();
-				Transaction trans1 = service1.gettransaction(acno);
+				ArrayList<Transaction> trans1 = service1.gettransaction(acno);
 				if(trans1==null) {
 					System.out.println("No transactions ");
 				}else {
-					System.out.println(trans1);
+					for(Transaction t:trans1) {
+						System.out.println(t);
+					}
 				}
 				
 			
@@ -175,7 +179,7 @@ public class Main {
 					pin = sc.nextInt();
 
 					Customer cust3 = service.getAccount(acno);
-					if(cust3 == null) {
+					if(cust3 != null) {
 					if (cust3.getPin() == pin) {
 						System.out.println("Current Balance " + cust3.getBalance());
 					}

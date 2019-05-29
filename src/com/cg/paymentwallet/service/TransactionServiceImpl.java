@@ -1,5 +1,6 @@
 package com.cg.paymentwallet.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.cg.paymentwallet.bean.Transaction;
@@ -23,8 +24,15 @@ public class TransactionServiceImpl implements iTransaction {
 	}
 
 	@Override
-	public Transaction gettransaction(long acc) throws CustomerException {
-		return dao.gettransaction(acc);
+	public ArrayList<Transaction> gettransaction(double acno) throws CustomerException {
+		// TODO Auto-generated method stub
+		return dao.gettransaction(acno);
 	}
+
+
+
+
+
+
 
 }
